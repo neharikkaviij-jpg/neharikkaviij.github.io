@@ -1838,6 +1838,196 @@
     border-radius: 0 !important;
   }
 
+
+  /* ── REQUESTED FINAL COLOR REFINEMENTS ── */
+  :root {
+    --violet-dark: #3F326B;
+    --violet-rich: #4B3A78;
+    --violet-card: rgba(255,255,255,0.08);
+    --violet-card-border: rgba(255,255,255,0.20);
+    --ivory-text: #F7F4EF;
+    --ivory-muted: #DED6C8;
+  }
+
+  /* About section: make left-side stats and highlighted phrase darker */
+  #about .stat-number {
+    color: var(--violet-dark) !important;
+  }
+
+  #about .stat {
+    border-left-color: var(--violet-dark) !important;
+  }
+
+  #about .about-body strong,
+  #about .about-body span,
+  #about .about-body .highlight,
+  #about .about-body .gold-text {
+    color: var(--violet-dark) !important;
+    font-weight: 750 !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Publications: violet background with white/ivory text */
+  #publications {
+    background: linear-gradient(180deg, #4B3A78 0%, #3F326B 100%) !important;
+    color: var(--ivory-text) !important;
+    border-top: 1px solid rgba(255,255,255,0.18) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.18) !important;
+  }
+
+  #publications .section-label,
+  #publications .lexis-kicker,
+  #publications .articles-label,
+  #publications .book-edition,
+  #publications .article-platform {
+    color: #E6D89A !important;
+    font-weight: 850 !important;
+  }
+
+  #publications .publications-header h2,
+  #publications .book-title,
+  #publications .article-title,
+  #publications .proof-title,
+  #publications .lexis-brand,
+  #publications .publisher-name,
+  #publications .publication-metric-number {
+    color: #FFFFFF !important;
+  }
+
+  #publications .pub-subtitle,
+  #publications .lexis-copy,
+  #publications .book-publisher,
+  #publications .book-foreword,
+  #publications .publisher-context,
+  #publications .book-highlights li,
+  #publications .article-year,
+  #publications .publication-metric-label {
+    color: var(--ivory-muted) !important;
+  }
+
+  #publications .publication-metric,
+  #publications .lexis-spotlight,
+  #publications .book-card,
+  #publications .featured-book-card,
+  #publications .article-card,
+  #publications .publisher-badge {
+    background: rgba(255,255,255,0.075) !important;
+    border-color: rgba(255,255,255,0.22) !important;
+    box-shadow: 0 18px 42px rgba(8,21,38,0.16) !important;
+  }
+
+  #publications .book-cover-wrap {
+    background: rgba(255,255,255,0.88) !important;
+    border-color: rgba(255,255,255,0.30) !important;
+  }
+
+  #publications .book-publisher span,
+  #publications .book-foreword strong,
+  #publications .publisher-badge,
+  #publications .book-highlights li::before,
+  #publications .article-arrow {
+    color: #E6D89A !important;
+  }
+
+  #publications .publisher-badge {
+    background: rgba(230,216,154,0.12) !important;
+  }
+
+  /* Experience: make Career Timeline darker */
+  #experience .section-label {
+    color: var(--violet-dark) !important;
+    font-weight: 850 !important;
+  }
+
+  #experience .timeline-company {
+    color: var(--violet-dark) !important;
+    font-weight: 850 !important;
+  }
+
+  #experience .timeline-period {
+    color: #0A1628 !important;
+    font-weight: 650 !important;
+  }
+
+  /* Credentials: purple background with clean readable text */
+  #credentials {
+    background: linear-gradient(180deg, #4B3A78 0%, #3F326B 100%) !important;
+    color: var(--ivory-text) !important;
+    border-top: 1px solid rgba(255,255,255,0.16) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.16) !important;
+  }
+
+  #credentials .section-label {
+    color: #E6D89A !important;
+    font-weight: 850 !important;
+  }
+
+  #credentials .credentials-header h2,
+  #credentials .cred-title {
+    color: #FFFFFF !important;
+  }
+
+  #credentials .cred-card {
+    background: rgba(255,255,255,0.085) !important;
+    border-color: rgba(255,255,255,0.22) !important;
+    box-shadow: 0 18px 42px rgba(8,21,38,0.16) !important;
+  }
+
+  #credentials .cred-type {
+    color: #E6D89A !important;
+    font-weight: 850 !important;
+  }
+
+  #credentials .cred-org {
+    color: var(--ivory-muted) !important;
+  }
+
+
+  /* ── FINAL SECTION DEPTH & EXPERTISE POSITIONING ── */
+
+  /* Deeper, more premium violet for Publications and Credentials */
+  #publications {
+    background: linear-gradient(180deg, #39265F 0%, #2F214F 100%) !important;
+  }
+
+  #credentials {
+    background: linear-gradient(180deg, #39265F 0%, #2F214F 100%) !important;
+  }
+
+  /* Ensure the Cross Jurisdictional Advisory card sits visually centered when it is the 5th card */
+  @media (min-width: 901px) {
+    #expertise .expertise-grid .expertise-card:nth-child(5) {
+      grid-column: 2;
+    }
+  }
+
+
+  /* ── EXPERIENCE EMPLOYER NAME EMPHASIS ── */
+  #experience .timeline-company {
+    font-size: 18.5px !important;
+    font-weight: 850 !important;
+    letter-spacing: 1.4px !important;
+    line-height: 1.25 !important;
+  }
+
+
+  /* ── RESTORED EXPERTISE SECTION LAYOUT ── */
+  @media (min-width: 901px) {
+    #expertise .expertise-grid .expertise-card:nth-child(5) {
+      grid-column: 2;
+    }
+  }
+
+
+  /* ── CENTER LAST EXPERTISE CARD ── */
+  @media (min-width: 901px) {
+    #expertise .expertise-grid .expertise-card:last-child {
+      grid-column: 2;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -1920,45 +2110,87 @@
 </section>
 <!-- EXPERTISE -->
 <section id="expertise">
-<div class="expertise-inner">
-<div class="expertise-header">
-<p class="section-label">Areas of Expertise</p>
-<h2>Where I Add Value</h2>
-</div>
-<div class="expertise-grid">
-<div class="expertise-card">
-<div class="expertise-icon">⚖️</div>
-<h3>Contract Drafting &amp; Negotiation</h3>
-<ul><li>700+ commercial agreements drafted and negotiated across law firm and Big Four environments.</li><li>630+ airline agreements for a leading international airline operating in the Singapore jurisdiction.</li><li>90+ Master Service Agreements (MSAs), Statements of Work (SOWs), and Change Orders reviewed at Ernst and Young (EY).</li></ul>
-</div>
-<div class="expertise-card">
-<div class="expertise-icon"><svg fill="none" height="32" stroke="#B08A3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24" width="32"><rect height="18" rx="1" width="18" x="3" y="3"></rect><path d="M3 9h18M9 3v18"></path></svg></div>
-<h3>Corporate &amp; Commercial Law</h3>
-<ul><li>7+ years across aviation, real estate, managed services, and professional services transactions.</li><li>Corporate advisory covering incorporations, governance records, resolutions, and statutory filings.</li><li>Commercially focused drafting style built for risk control, business continuity, and deal closure.</li></ul>
-</div>
-<div class="expertise-card">
-<div class="expertise-icon"><svg fill="none" height="32" stroke="#B08A3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24" width="32"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path><polyline points="21 3 21 9 15 9"></polyline></svg></div>
-<h3>Contract Lifecycle Management (CLM)</h3>
-<ul><li>Led Contract Lifecycle Management (CLM) for 90+ Ernst and Young (EY) agreements from intake to execution.</li><li>Primary legal point of contact for 3 United States client teams: General Counsel, Third Party Risk Management (TPRM), and Managed Services.</li><li>Built clause tools, review checklists, and escalation rules to improve speed, consistency, and risk visibility.</li></ul>
-</div>
-<div class="expertise-card">
-<div class="expertise-icon"><svg fill="none" height="32" stroke="#B08A3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24" width="32"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><line x1="10" x2="8" y1="9" y2="9"></line></svg></div>
-<h3>Legal Document Review &amp; Due Diligence</h3>
-<ul><li>30+ real estate legal due diligence matters completed at Kochhar and Co. across title, ownership, approvals, and compliance gaps.</li><li>Due diligence managed alongside 630+ airline agreements, balancing transaction volume, deadlines, and risk review.</li><li>Risk reports, legal research, and mitigation inputs delivered for aviation, real estate, and commercial transactions.</li></ul>
-</div>
-<div class="expertise-card">
-<div class="expertise-icon"><svg fill="none" height="32" stroke="#B08A3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24" width="32"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg></div>
-<h3>Corporate Compliance</h3>
-<ul><li>Ministry of Corporate Affairs (MCA) and Registrar of Companies (ROC) filings, registers, resolutions, and governance records managed.</li><li>Annual General Meetings (AGMs), board meetings, minutes, and post meeting filings handled for corporate clients.</li><li>Ontario Board Secretary experience supporting correspondence, fiduciary records, and institutional governance.</li></ul>
-</div>
-<div class="expertise-card">
-<div class="expertise-icon"><svg fill="none" height="32" stroke="#B08A3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24" width="32"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
-<h3>Cross Jurisdictional Advisory</h3>
-<ul><li>Cross border exposure across Asia Pacific (APAC) and Americas legal environments.</li><li>Singapore jurisdiction airline mandate involving 630+ complex agreements and sector specific commercial risk.</li><li>Canada ready profile: National Committee on Accreditation (NCA) accredited and Law Society of Ontario (LSO) licensing candidate.</li></ul>
-</div>
-</div>
-</div>
+  <div class="expertise-inner">
+    <div class="expertise-header">
+      <p class="section-label">Areas of Expertise</p>
+      <h2>Where I Add Value</h2>
+      <div class="gold-divider"><span class="gold-monogram">NV</span></div>
+    </div>
+
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <div class="expertise-icon">⚖️</div>
+        <h3>Contract Drafting &amp; Negotiation</h3>
+        <ul>
+          <li>700+ commercial agreements drafted and negotiated across law firm and Big Four environments.</li>
+          <li>630+ airline agreements for a leading international airline operating in the Singapore jurisdiction.</li>
+          <li>90+ Master Service Agreements (MSAs), Statements of Work (SOWs), and Change Orders reviewed at Ernst and Young (EY).</li>
+        </ul>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">🛡️</div>
+        <h3>Contract Risk Management</h3>
+        <ul>
+          <li>Contract-risk review across a 700+ agreement portfolio, including Big Four managed-services contracts and airline commercial mandates.</li>
+          <li>Risk positions assessed across liability, indemnity, compliance, service scope, commercial exposure, operational continuity and escalation triggers.</li>
+          <li>Built review checklists, clause tools and escalation rules to support faster approvals, cleaner negotiation positions and controlled deal closure.</li>
+        </ul>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">📑</div>
+        <h3>Contract Lifecycle Management</h3>
+        <ul>
+          <li>Managed contracts from intake, drafting and review through negotiation, escalation, execution and repository hygiene.</li>
+          <li>Supported three United States client teams at Ernst and Young (EY): General Counsel, Third Party Risk Management (TPRM), and Managed Services.</li>
+          <li>Created structured review tools to improve drafting consistency, risk visibility and turnaround discipline.</li>
+        </ul>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">🏢</div>
+        <h3>Corporate &amp; Commercial Advisory</h3>
+        <ul>
+          <li>Advised on commercial operations, corporate setup, board processes, statutory filings and Companies Act, 2013 compliance.</li>
+          <li>Supported business incorporations, Memoranda and Articles of Association, board documentation and Registrar of Companies (ROC) filings.</li>
+          <li>Worked across law firm, Big Four and governance environments with strong documentation and compliance discipline.</li>
+        </ul>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">🌐</div>
+        <h3>Cross Jurisdictional Advisory</h3>
+        <ul>
+          <li>Legal exposure across Asia Pacific (APAC) and Americas legal environments, including India, Singapore, United States and Canada.</li>
+          <li>Advised on commercial contracts connected to cross-border airline operations and multi-jurisdictional engagement contracting.</li>
+          <li>Canadian legal readiness strengthened through National Committee on Accreditation (NCA) completion and Law Society of Ontario (LSO) candidacy.</li>
+        </ul>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">🔍</div>
+        <h3>Legal Due Diligence</h3>
+        <ul>
+          <li>30+ real estate legal due diligence matters completed during law firm practice.</li>
+          <li>Reviewed title documents, ownership records, approvals, encumbrances and transaction documentation.</li>
+          <li>Identified legal, commercial and compliance risks before deal execution and client decision-making.</li>
+        </ul>
+      </div>
+
+      <div class="expertise-card">
+        <div class="expertise-icon">✍️</div>
+        <h3>Legal Research &amp; Publishing</h3>
+        <ul>
+          <li>Author of four legal books across technology law and international trade law.</li>
+          <li>Published with LexisNexis and Universal Law Publishing, an imprint of LexisNexis.</li>
+          <li>Research-driven legal writing supported by statutory interpretation, policy analysis and commercial law experience.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- PUBLICATIONS -->
 <section id="publications">
 <div class="publications-inner">
@@ -2101,7 +2333,7 @@
 </div>
 <div class="social-feature-card">
 <div class="social-feature-main">
-<div class="social-meta">Women’s Rights &amp; Public Institution Exposure · New Delhi, India</div>
+<div class="social-meta">Women’s Rights &amp; Public Institution Exposure · New Delhi, India · September 2012</div>
 <h3>National Commission for Women Internship</h3>
 <p class="social-role">Legal Intern · National Commission for Women (NCW) · Statutory body for women’s rights and grievance redressal</p>
 <ul class="social-bullets">
@@ -2115,12 +2347,12 @@
 <div class="social-proof-card">
 <span class="proof-label">Institutional Exposure</span>
 <span class="proof-title">National Commission for Women</span>
-<p class="proof-copy">One-month legal internship with exposure to women’s rights complaints and statutory grievance redressal processes.</p>
+<p class="proof-copy">Short legal internship completed in September 2012, with exposure to women’s rights complaints and statutory grievance redressal processes.</p>
 </div>
 <div class="social-proof-card">
 <span class="proof-label">Official Recognition</span>
 <span class="proof-title">Internship Certificate</span>
-<p class="proof-copy">Certificate issued by the National Commission for Women; exact timeline to be added after verification.</p>
+<p class="proof-copy">Certificate issued by the National Commission for Women for the September 2012 internship.</p>
 </div>
 </div>
 </div>
@@ -2185,12 +2417,12 @@
 <div class="social-proof-card">
 <span class="proof-label">Sustained Commitment</span>
 <span class="proof-title">Three Years</span>
-<p class="proof-copy">Long-term education support focused on foundational literacy and mentorship for an underprivileged girl student.</p>
+<p class="proof-copy">Three-year literacy commitment completed in April 2004; certificate available upon request.</p>
 </div>
 <div class="social-proof-card">
 <span class="proof-label">Official Recognition</span>
 <span class="proof-title">Literacy Certificate</span>
-<p class="proof-copy">Certificate available upon request; exact timeline to be added after verification.</p>
+<p class="proof-copy">Certificate available upon request; completed in April 2004.</p>
 </div>
 </div>
 </div>
@@ -2227,10 +2459,10 @@
 </div>
 <div class="timeline-role">Assistant Manager, Legal &amp; Senior Associate</div>
 <ul class="timeline-achievements">
-<li>Led end-to-end contract lifecycle management for 90+ commercial and managed services agreements, including Master Service Agreements (MSAs), Statements of Work (SOWs), Change Orders (COs), and Change Requests.</li>
+<li>Led end-to-end contract lifecycle management and contract risk management for 90+ commercial and managed services agreements, including Master Service Agreements (MSAs), Statements of Work (SOWs), Change Orders (COs), and Change Requests.</li>
 <li>Served as the primary legal point of contact for 3 internal EY United States client teams: General Counsel, Third Party Risk Management, and Managed Services.</li>
 <li>Managed, mentored, and trained a team of 3 legal professionals, using milestone-based checklists to improve contract quality, review discipline, and delivery consistency.</li>
-<li>Developed a Contract Review and Escalation Policy to standardize risk flag handling, reduce ambiguity, and strengthen engagement contracting decisions.</li>
+<li>Developed a Contract Review and Escalation Policy to standardize risk-flag handling, reduce ambiguity, and strengthen engagement contracting decisions across contract-risk review workflows.</li>
 <li>Created a Standard Legal Clauses Ready Reckoner and conducted legal training for 4 to 5 colleagues on contract review methodology, documentation standards, and commercial risk identification.</li>
 </ul>
 </div>
@@ -2243,8 +2475,8 @@
 <div class="timeline-role">Associate</div>
 <ul class="timeline-achievements">
 <li>Advised a leading international airline on Singapore jurisdiction commercial operations, drafting, reviewing, and negotiating 630+ complex agreements across aviation and commercial workstreams.</li>
-<li>Worked on Ground Handling Agreements, Corporate Travel Agreements, Cargo Sales Agency Agreements, Novation Agreements, Non Disclosure Agreements (NDAs), Marketing Agreements, Letters of Intent, and service agreements.</li>
-<li>Conducted 30+ real estate legal due diligence matters, reviewing title documents, ownership records, approvals, encumbrances, and transaction documentation to identify legal and compliance risks.</li>
+<li>Performed contract-risk review across Ground Handling Agreements, Corporate Travel Agreements, Cargo Sales Agency Agreements, Novation Agreements, Non Disclosure Agreements (NDAs), Marketing Agreements, Letters of Intent, and service agreements.</li>
+<li>Conducted 30+ real estate legal due diligence matters, reviewing title documents, ownership records, approvals, encumbrances, and transaction documentation to identify legal, commercial and compliance risks.</li>
 <li>Supported incorporation and legal setup of 2 to 3 businesses in India, including Memoranda and Articles of Association, statutory registers, annual returns, and filings under the Companies Act, 2013.</li>
 <li>Convened and documented 5 to 7 Annual General Meetings and multiple board meetings, prepared minutes, and filed documents with the Registrar of Companies through the Ministry of Corporate Affairs (MCA) portal.</li>
 </ul>
